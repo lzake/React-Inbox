@@ -1,6 +1,16 @@
 import React, { Component } from 'react'
 
 class Toolbar extends Component {
+
+    constructor () {
+        super()
+        this.selectAll = this.selectAll.bind(this)
+    }
+
+    selectAll () {
+        this.props.selectAll()
+    }
+
     render () {
         return (
             <div className="row toolbar">
@@ -14,7 +24,7 @@ class Toolbar extends Component {
                 <i className="fa fa-plus"></i>
               </a>
           
-              <button className="btn btn-default">
+              <button className="btn btn-default" id="groupCheck" onClick={this.selectAll}>
                 <i className="fa fa-minus-square-o"></i>
               </button>
           
