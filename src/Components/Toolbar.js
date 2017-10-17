@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+//toolbar app component
 class Toolbar extends Component {
 
     constructor () {
@@ -91,18 +92,13 @@ class Toolbar extends Component {
       this.props.removeLabel(label)
     }
 
-    checkUnread () {
 
-    }
+    render () {return (
 
-    render () {
-        return (
-            <div className="row toolbar">
+      
+            <div className="row toolbar mid top">
             <div className="col-md-12">
-              <p className="pull-right">
-                <span className="badge badge"></span>
-                unread messages
-              </p>
+              
           
               <a className="btn btn-danger">
                 <i className="fa fa-plus"></i>
@@ -118,21 +114,22 @@ class Toolbar extends Component {
           
               <select className="form-control label-select" onChange={this.addLabel} id="addLabel">
                 <option>Apply label</option>
-                <option value="dev">dev</option>
-                <option value="personal">personal</option>
-                <option value="gschool">gschool</option>
+                <option value="dev">Chair Force</option>
+                <option value="personal">Galv</option>
+                <option value="gschool">Jobbies</option>
               </select>
           
               <select className="form-control label-select" onChange={this.removeLabel} id="removeLabel">
                 <option>Remove label</option>
-                <option value="dev">dev</option>
-                <option value="personal">personal</option>
-                <option value="gschool">gschool</option>
+                <option value="dev">Chair Force</option>
+                <option value="personal">Galv</option>
+                <option value="gschool">Jobbies</option>
               </select>
           
               <button className="btn btn-default" onClick={this.remove}>
                 <i className="fa fa-trash-o"></i>
               </button>
+              <button className="btn btn-default" onClick={this.markUnread}>Unread Messages (  )</button>
             </div>
           </div>
         )

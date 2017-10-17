@@ -26,3 +26,15 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.top{
+  padding-top: 10%;
+}
+
+.smallmid {
+  width: 50%;
+}
+
+.mid{
+  margin-left:25%;
+}
