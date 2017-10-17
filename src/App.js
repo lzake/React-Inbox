@@ -10,13 +10,12 @@ import data from './MessageData'
 
 //defines app (whole page concept)
 class App extends Component {
-
+//this here constructor sets the state as something imported, in this case data, so you dont have to bind 4thousand things
   constructor () {
     super()
     this.state = {
       messages: data
-    }
-  }
+    }}
 
   toggleSelected = (message) => {
     const messages = [...this.state.messages]
@@ -31,8 +30,7 @@ class App extends Component {
         }
       }
     }
-    this.setState({...this.state, messages: messages})
-  }
+    this.setState({...this.state, messages: messages})}
 
   toggleStarred = (message) => {
       let messageID = message.props.content.id
@@ -47,16 +45,14 @@ class App extends Component {
           }
         }
       }
-      this.setState({messages: messages})
-  }
+      this.setState({messages: messages})}
 
   selectAll = () => {
     const messages = [...this.state.messages]
     for (let i = 0; i < messages.length; i++) {
       messages[i]['selected'] = true
     }
-    this.setState({messages: messages})
-  }
+    this.setState({messages: messages})}
 
   selectNone = () => {
     const messages = [...this.state.messages]
