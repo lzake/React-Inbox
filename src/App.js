@@ -8,14 +8,29 @@ import MessageList from './Components/MessageList'
 //imports messsage data
 import data from './MessageData'
 
+
+
 //defines app (whole page concept)
 class App extends Component {
 //this here constructor sets the state as something imported, in this case data, so you dont have to bind 4thousand things
   constructor () {
     super()
     this.state = {
-      messages: data
+      messages: data || []
     }}
+
+//import api
+componentDidMount = () => {
+  fetch('http://hypermedia-server.ngrok.io/api/messages')
+    .then((res) => res.json())
+    .then((res) => {
+      console.log(res._embedded.messages)
+      this.setState({ messages: res._embedded.messages })
+      
+    }
+    )
+}
+
 
   toggleSelected = (message) => {
     const messages = [...this.state.messages]
