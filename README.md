@@ -5,3 +5,4 @@ This is an interactive react inbox# React-Inbox
 ![PREAPI](/preAPI.png "preAPI")
 
 1. Post API load
+![POSTAPI](/postAPI.png "postAPI")
