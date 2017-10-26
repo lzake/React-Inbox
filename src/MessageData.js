@@ -43,14 +43,14 @@ const data = [
     },
     {
       "id": 7,
-      "subject": "Test6 fucker ",
+      "subject": "Test6 you are a very nice person",
       "read": true,
       "starred": false,
       "labels": ["Chair Force", "galv"]
     },
     {
       "id": 8,
-      "subject": "poop",
+      "subject": "fecal matter",
       "read": true,
       "starred": true,
       "labels": ['jobbies']
