@@ -9,7 +9,7 @@
          Design - React-Strap Node package, Bootstrap
 
 1. Pre API load
-![PREAPI](/preAPI.png "preAPI")
+![PREAPI](/preAPIminuscussword.png "preAPI")
 
 1. Post API load
 ![POSTAPI](/postAPI.png "postAPI")
